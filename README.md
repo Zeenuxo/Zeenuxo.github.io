@@ -11,14 +11,14 @@ Hosted on Github Pages - https://zeenuxo.github.io/
 If you do decide to use my Design Idea please Attribute Me. 
 I was inspired by Britanny Chiang at https://github.com/bchiang7. 
 
-# Dependencies
+## Dependencies
 lite-server
 
-# Getting Started
+## Getting Started
 npm install lite-server --save-dev
 npm start
 
-# Inside package.json...
+## Inside package.json...
  "scripts": {
     "lite": "lite-server --port 5501",
     "start": "npm run lite"
