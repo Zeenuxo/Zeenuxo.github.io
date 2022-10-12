@@ -1,0 +1,328 @@
+
+/*===========================================================================================*/
+/*================== DEVICE BREAKPOINTS FOR MEDIA QUERY =====================================*/
+/*===========================================================================================*/
+
+
+
+
+/*================== LAPTOP/ SMALL DESKTOP ==================================================================================================================================================================================*/
+@media only screen and (max-width: 1024px) {}
+
+
+
+
+
+/*================== TABLET ==================================================================================================================================================================================*/
+@media only screen and (min-width: 768px) and (max-width: 1023px) {
+.home,
+.about,
+.portfolio,
+.gallery,
+.blog,
+.contact{
+    padding-top: 5rem;
+    padding-bottom: 6rem;
+    padding-left: 3rem;
+    padding-right: 3rem;
+    margin-left: 1rem;
+    margin-right: 1rem;
+}
+
+/*NAVBAR======================================*/
+.navbar {
+    grid-area: navbar;
+    padding: 2rem;
+}
+
+.navmenu {
+    display: none;
+}
+
+.hamburger {
+    display: grid;
+    justify-content: right;
+    align-items: center;
+}
+
+/*HOME======================================*/
+.home {
+    grid-template-areas:
+        "home__img"
+        "home__hero"
+        "home__social";
+}
+
+.home__img{
+    justify-self: center;
+}
+
+/*ABOUT======================================*/
+.about {
+    grid-template-areas:
+    "about__title"
+    "about__img"
+    "about__content"
+    "about__skills";
+}
+
+.about__img{
+    justify-self: center;
+}
+.about__content{
+    padding-top: 2rem;
+}
+
+/*PORTFOLIO======================================*/
+.portfolio {
+    grid-area: portfolio;
+    grid-template-areas:
+        "portfolio__title"
+        "portfolio__content"
+        "portfolio__carousel"
+        "portfolio__more";
+}
+
+/*Gallery======================================*/
+.gallery {
+    grid-area: gallery;
+    grid-template-areas:
+        "gallery__title gallery__title"
+        "box-1  box-2"
+        "box-3  box-4"
+        "box-5  box-6";
+        justify-content: center;
+}
+
+.box-1,
+.box-2,
+.box-3,
+.box-4,
+.box-5,
+.box-6 {
+    width: 20rem;
+}
+
+/*BLOG======================================*/
+.blog {
+    grid-area: blog;
+    grid-template-areas:
+        "blog__title"
+        "blog__content"
+        "blog-1"
+        "blog-2"
+        "blog-3";
+        justify-items: center;
+        text-align: center;
+}
+
+.blog-1,
+.blog-2,
+.blog-3{
+width: 30rem;
+}
+
+/*CONTACT======================================*/
+.contact {
+    grid-area: contact;
+    grid-template-areas:
+        "contact__title"
+        "contact__content"
+        "contact__social";
+}
+
+/*FOOTER======================================*/
+.footer {
+    grid-area: footer;
+    grid-template-areas:
+        "footer__copyright footer__credit";
+    padding: 2rem;
+    justify-items: center;
+    column-gap: 20rem;
+}
+
+.archive{
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+    padding-left: 5rem;
+    padding-right: 5rem;
+    row-gap: 2rem;
+}
+
+.a-demo h2{
+display: none;
+}
+
+.archive-img{
+display: none;
+}
+
+.archive__table{
+border-collapse: separate;
+}
+
+}
+
+
+
+/*================== SMARTPHONE ==================================================================================================================================================================================*/
+@media only screen and (min-width: 320px) and (max-width: 767px) {
+  
+    .home,
+    .about,
+    .portfolio,
+    .gallery,
+    .blog,
+    .contact {
+        padding-top: 5rem;
+        padding-bottom: 6rem;
+        padding-left: 3rem;
+        padding-right: 3rem;
+        margin-left: 1rem;
+        margin-right: 1rem;
+    }
+    
+    /*NAVBAR======================================*/
+    .navbar {
+        grid-area: navbar;
+        padding: 1rem;   
+    }
+    
+    .navmenu {
+        display: none;
+    }
+    
+    .hamburger {
+        display: grid;
+        justify-content: right;
+        align-items: center;
+    }
+    
+    /*HOME======================================*/
+    .home {
+        grid-template-areas:
+            "home__img"
+            "home__hero"
+            "home__social";
+    }
+    
+    .home__img{
+        justify-self: center;
+    }
+    
+    /*ABOUT======================================*/
+    .about {
+        grid-template-areas:
+        "about__title"
+        "about__img"
+        "about__content"
+        "about__skills";
+    }
+    
+    .about__img{
+        justify-self: center;
+    }
+    .about__content{
+        padding-top: 2rem;
+    }
+    
+    /*PORTFOLIO======================================*/
+    .portfolio {
+        grid-area: portfolio;
+        grid-template-areas:
+            "portfolio__title"
+            "portfolio__content"
+            "portfolio__carousel"
+            "portfolio__more";
+    }
+    
+    /*GALLERY ======================================*/
+    .gallery {
+        grid-area: gallery;
+        grid-template-areas:
+            "gallery__title"
+            "box-1"
+            "box-2"
+            "box-3"
+            "box-4"
+            "box-5"
+            "box-6";
+            justify-content: center;
+    }
+    
+    .box-1,
+    .box-2,
+    .box-3,
+    .box-4,
+    .box-5,
+    .box-6 {
+        width: 25rem;
+    }
+    
+    /*BLOG======================================*/
+    .blog {
+        grid-area: blog;
+        grid-template-areas:
+            "blog__title"
+            "blog__content"
+            "blog-1"
+            "blog-2"
+            "blog-3";
+            justify-items: center;
+            text-align: center;
+    }
+    
+    .blog-1,
+    .blog-2,
+    .blog-3{
+    width: 30rem;
+    }
+    
+    /*CONTACT======================================*/
+    .contact {
+        grid-area: contact;
+        grid-template-areas:
+            "contact__title"
+            "contact__content"
+            "contact__social";
+    }
+    
+    /*FOOTER======================================*/
+    .footer {
+        grid-area: footer;
+        grid-template-areas:
+            "footer__copyright"
+            "footer__credit";
+        row-gap: 1rem;
+        padding: 2rem;
+        justify-items: center;
+        padding: 1rem;
+      }
+
+
+    .archive{
+        padding-top: 3rem;
+        padding-bottom: 3rem;
+        padding-left: 0rem;
+        padding-right: 0rem;
+        row-gap: 1rem;
+    }
+    
+
+
+ .a-demo h2{
+    display: none;
+ }
+
+ .archive-img{
+    display: none;
+ }
+
+
+.archive__table{
+    border-collapse: separate;
+}
+
+}
+
+

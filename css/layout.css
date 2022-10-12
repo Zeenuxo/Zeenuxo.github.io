@@ -1,0 +1,970 @@
+/*==================== LAYOUT ====================================================================================================================================================*/
+
+/*Main Grid (Sections) */
+.main-grid {
+    grid-area: main-grid;
+    display: grid;
+    row-gap: 1.2rem;
+    grid-template-areas:
+        "navbar"
+        "home"
+        "about"
+        "portfolio"
+        "gallery"
+        "blog"
+        "contact"
+        "footer";
+}
+
+/*Main Grid - Children*/
+.home,
+.about,
+.portfolio,
+.gallery,
+.blog,
+.contact {
+    /*Outside Section */
+    padding-top: 16rem;
+    padding-bottom: 16rem;
+
+    padding-left: 10rem;
+    padding-right: 10rem;
+
+    /*Inside Section */
+    margin-left: 20rem;
+    margin-right: 20rem;
+}
+
+
+
+
+/*==================== NAV GRID============================================================== */
+.navbar {
+    display: grid;
+    grid-area: navbar;
+    gap: 0.5rem;
+
+    background-color: var(--theme);
+    box-shadow: var(--boxshadow);
+
+    grid-template-columns: repeat(auto, 1fr);
+    grid-template-areas:
+        "logo navmenu";
+
+    padding: 1.5rem 3rem 1rem 3rem;
+
+}
+
+.logo {
+    display: grid;
+    grid-area: logo;
+    align-items: center;
+}
+
+.brand {
+    width: 3rem;
+    height:3rem;
+    filter: var(--icon);
+}
+
+.navmenu {
+    display: grid;
+    grid-area: navmenu;
+    justify-content: right;
+    align-content: center;
+    grid-auto-flow: column;
+    grid-gap: 2rem;
+    padding-right: 2rem;
+}
+
+.navmenu a{
+    color: var(--highlight);
+}
+
+.navmenu a:hover{
+    color: var(--text);
+    cursor: pointer;
+}
+
+.hamburger {
+    display: none;
+    color: var(--highlight);
+}
+
+.sidenav {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 2000;
+    top: 0;
+    right: 0;
+    background-color: var(--theme);
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 15rem;
+    border: var(--highlight);
+}
+
+.sidenav a {
+    display: block;
+    padding: 0rem 0rem 2.5rem 0rem; 
+    font-size: 4rem;
+    color: var(--text);
+    transition: 0.3s;
+    text-align: center;
+}
+
+.sidenav a:hover {
+    color: var(--highlight);
+}
+
+.sidenav .closebtn {
+    position: absolute;
+    top: 4rem;
+    left: 0rem;
+    right: 0rem;
+    font-size: 4rem;
+    color: var(--highlight);
+}
+
+
+
+/*==================== SUB GRIDS (Nesting Children) ====================================================================================================================================================*/
+/*Home Grid */
+.home {
+    grid-area: home;
+
+    display: grid;
+    grid-template-areas:
+    "home__hero    home__img"
+    "home__social  home__img";
+
+    column-gap: 2rem;
+    background-image: url("../images/icons/pattern.svg");
+    background-size: 37rem;
+    background-repeat: no-repeat;
+    background-position: right;
+}
+
+/*Home SubGrid - Children */
+.home__hero {
+    grid-area: home__hero;
+}
+
+.home__img {
+    grid-area: home__img;
+}
+
+.home__social {
+    display: grid;
+    grid-auto-flow: column;
+    transform: translateY(3rem);
+    column-gap: 1.5rem;
+    justify-content: start;
+}
+
+.home__social img {
+    width: 1.5rem;
+    height: 1.8rem;
+    filter: var(--icon);
+    cursor: pointer;
+}
+
+.home__social img:hover {
+    filter: var(--hover);
+    animation: shake 2s ease 0s infinite normal forwards;
+}
+
+
+
+/* Terminal Effect Overlay */
+.terminal {
+    position: relative;
+    display: inline-block;
+    max-width: 20rem;
+    height: 15rem;
+    padding: 1rem;
+    color: var(--highlight);
+    z-index: 1;
+}
+
+
+/* Terminal Text: White */
+.home__img span {
+    color: #b5bbd9;
+}
+
+
+.home-btn{
+    display: inline-grid;
+    transform: translateY(1.25rem);
+}
+
+
+
+/*==================== ABOUT GRID==============================================================*/
+.about {
+    grid-area: about;
+
+    display: grid;
+    grid-template-areas:
+        "...          about__title"
+        "about__img   about__content"
+        "about__img   about__skills";
+
+    row-gap: 1.25rem;
+    column-gap: 3.1rem;
+    background-image: url("../images/icons/pattern.svg");
+    background-size: 37rem;
+    background-repeat: no-repeat;
+    background-position: center;
+
+}
+
+/* Main Grid */
+.about__title {
+    grid-area: about__title;
+    display: grid;
+    justify-items: center;
+}
+
+.about__img {
+    grid-area: about__img;
+    display: grid;
+    border: 0.063rem dashed var(--highlight);
+
+    max-width: 15.6rem;
+    height: 21.9rem;
+    justify-content: center;
+    align-items: center;
+}
+
+.about__content {
+    grid-area: about__content;
+    display: grid;
+    text-align: justify;
+}
+
+.about__skills {
+    display: grid;
+    grid-area: about__skills;
+    grid-auto-flow: column;
+    column-gap: 2rem;
+    justify-content: start;
+}
+
+.about__skills img {
+    width: 2.5rem;
+    height: 2.8rem;
+    cursor: pointer;
+    filter: var(--icon);
+    opacity: 60%;
+}
+
+.about__skills img:hover {
+    animation: shake 2s ease 0s infinite normal forwards;
+    filter: var(--hover);
+    opacity: 100%;
+}
+
+
+.profile-card {
+    display: grid;
+    max-width: 15.6rem;
+    height: 21.9rem;
+    position: relative;
+    padding: 0.5rem;
+
+}
+
+.profile-img {
+    display: grid;
+    justify-self: center;
+    align-self: center;
+
+    width: 7.5rem;
+    height: 7.5rem;
+    border-radius: 50%;
+    transform: translateY(0.87rem);
+}
+
+.profile-text {
+    font-size: 0.65rem;
+    text-align: center;
+    font-style: italic;
+    letter-spacing: 0.05rem;
+    transform: translateY(3.1rem);
+    opacity: 60%;
+}
+
+.profile-onering{
+    display: grid;
+    justify-self: center;
+    position: absolute;
+    filter: var(--icon);
+    width: 15.6rem;
+    height: 13.1rem;
+}
+    
+
+.profile-btn{
+    display: grid;
+    margin: 0 auto;
+    transform: translateY(1.5rem);
+}
+
+
+
+/*==================== PORTFOLIO GRID==============================================================*/
+.portfolio {
+    grid-area: portfolio;
+
+    display: grid;
+    row-gap: 1.25rem;
+    grid-template-areas:
+        "portfolio__title"
+        "portfolio__content"
+        "portfolio__carousel"
+        "portfolio__more";
+
+        background-image: url("../images/icons/pattern.svg");
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: center;
+}
+
+/* Main Grid */
+.portfolio__title {
+    grid-area: portfolio__title;
+    display: grid;
+    justify-content: center;
+}
+
+.portfolio__content {
+    grid-area: portfolio__content;
+}
+
+.portfolio__carousel {
+    grid-area: portfolio__carousel;
+    display: grid;
+}
+
+/* Main Container to hold Swiper */
+.portfolio__container {
+    width: 100%;
+    height: 100%;
+    transform: translateY(3.1rem);
+}
+
+/* Image Cards */
+.portfolio__box {
+    background-position: center;
+    background-size: cover;
+    width: 100%;
+    height: 93%;
+    cursor: pointer;
+}
+
+.portfolio__text h4{
+    color: #b5bbd9;
+    text-align: center;
+}
+
+.portfolio__text p{
+    text-align: justify;
+}
+
+
+
+.portfolio__img {
+    width: 100%;
+    height: 85%;
+    border-top-left-radius: var(--radius);
+    border-top-right-radius: var(--radius);
+}
+
+
+/* Left & Right Arrows */
+/* Hide Default Arrows with Pseudo Elements */
+.swiper-button-prev::after,
+.swiper-button-next::after {
+    content: '';
+}
+
+.left-arrow {
+    width: 3.1rem;
+    height: 3.1rem;
+    filter: var(--icon);
+    transform: translateX(0.1rem);
+}
+
+.right-arrow {
+    width: 3.1rem;
+    height: 3.1rem;
+    filter: var(--icon);
+    transform: translateX(-0.1rem);
+}
+
+/* Pagination Styling */
+.swiper-pagination{
+    transform: translateY(1rem);
+}
+.swiper-pagination-bullet-active {
+    background-color: var(--highlight);
+}
+
+.portfolio__more {
+display: grid;
+grid-area: portfolio__more;
+justify-content: center;
+align-items: center;
+transform: translateY(4.3rem);
+}
+
+.portfolio__more img{
+   width: 1.8rem;
+   height: 1.8rem;
+   filter: var(--icon);
+   cursor: pointer;
+    }
+
+/*==================== Gallery ==============================================================*/
+.gallery {
+    grid-area: gallery;
+    display: grid;
+    grid-template-areas:
+        "gallery__title  gallery__title  gallery__title"
+        "box-1              box-2              box-3"
+        "box-4              box-5              box-6";
+    row-gap: 1.25rem;
+    column-gap: 1.25rem;
+    background-image: url("../images/icons/pattern.svg");
+
+    background-position: right;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+.archive__icon {
+    width: 3.1rem;
+    height: 3.1rem;
+    filter: var(--icon);
+}
+
+.archive__icon:hover{
+    filter: var(--hover);
+    animation: shake 2s ease 0s infinite normal forwards;
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+
+/* Main Grid */
+.gallery__title {
+    display: grid;
+    grid-area: gallery__title;
+    text-align: center;
+}
+
+.gallery__title h4:hover {
+text-decoration: underline;
+cursor: pointer;
+}
+
+.box-1,
+.box-2,
+.box-3,
+.box-4,
+.box-5,
+.box-6 {
+    grid-area: box-1, box-2, box-3, box-4, box-5, box-6;
+    display: grid;
+    grid-template-areas:
+        "box__title"
+        "box__content"
+        "box__tag";
+    row-gap: 0.9rem;
+    padding: 1rem;
+
+    background: var(--theme);
+    border-radius: var(--radius);
+    transition: background 0.5s, transform 0.5s;
+    box-shadow: var(--boxshadow);
+}
+
+/* Sub-Grid */
+.box__title {
+    grid-area: box__title;
+    display: grid;
+ }
+
+.box__content {
+    grid-area: box__content;
+    display: grid;
+}
+
+.box__tag {
+    grid-area: box__tag;
+    display: inline-grid;
+    grid-auto-flow: column;
+    column-gap: 1rem;
+    align-items: baseline;
+}
+
+.box__link {
+    width: 1.1rem;
+    height: 1.1rem;
+    filter: var(--icon);
+}
+
+.box-1:hover,
+.box-2:hover,
+.box-3:hover,
+.box-4:hover,
+.box-5:hover,
+.box-6:hover {
+    transform: translateY(-0.9rem);
+}
+
+
+
+/*==================== BLOG GRID==============================================================*/
+.blog {
+    grid-area: blog;
+    display: grid;
+    grid-template-areas:
+        "blog__title    blog__title    blog__title"
+        "blog__content  blog__content  blog__content"
+        "blog-1         blog-2         blog-3";
+
+    row-gap: 1.25rem;
+    column-gap: 1.8rem;
+
+    background-image: url("../images/icons/pattern.svg");
+    background-size: contain;
+    background-repeat: no-repeat;
+
+}
+
+/* Main Grid */
+.blog__title {
+    grid-area: blog__title;
+    display: grid;
+    justify-items: center;
+}
+
+.blog__content {
+    grid-area: blog__content;
+    display: grid;
+    justify-items: center;
+}
+
+.blog-1,
+.blog-2,
+.blog-3 {
+    grid-area: blog-1, blog-2, blog-3;
+    display: grid;
+
+    background: var(--theme);
+    border-radius: var(--radius);
+
+    box-shadow: var(--boxshadow);
+    padding: 0.5rem;
+}
+
+
+.blog-cover {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+
+    display: grid;
+    background: var(--theme);
+    border-radius: var(--radius);
+    justify-content: center;
+    align-items: center;
+
+}
+
+
+.blog-cover img {
+    width: 6rem;
+    height: 6rem;
+    filter: var(--icon);
+}
+
+
+.blog-cover:hover {
+    opacity: 1%;
+    transition: 0.6s ease-in-out;
+}
+
+
+.blog-back {
+    width: 100%;
+    height: 100%;
+}
+
+
+.blog-header img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border: 0.063rem dotted var(--highlight);
+    border-radius: var(--radius);
+}
+
+.blog-body {
+    display: grid;
+    align-items: start;
+    padding: 0.62rem;
+}
+
+.blog-tag {
+    color: var(--theme);
+    border-radius: 3.1rem;
+    padding: 0.12rem 0.31rem;
+    background-color: var(--highlight);
+}
+
+
+.blog-body h3 {
+    color: var(--highlight);
+    margin-bottom: 0.5rem;
+}
+
+
+
+
+
+
+
+
+
+
+/*==================== CONTACT GRID==============================================================*/
+.contact {
+    grid-area: contact;
+
+    display: grid;
+    grid-template-areas:
+        "contact__title"
+        "contact__content"
+        "contact__social";
+
+    row-gap: 1.25rem;
+
+    background-image: url("../images/icons/pattern.svg");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+
+/* Main Grid */
+.contact__title {
+    grid-area: contact__title;
+    display: grid;
+    justify-items: center;
+}
+
+.contact__content {
+    grid-area: contact__content;
+    display: grid;
+    justify-items: center;
+}
+
+.contact__social {
+    grid-area: contact__social;
+    display: grid;
+    justify-items: center;
+    transform: translateY(2.5rem);
+}
+
+.message-box {
+    border: 0.063rem dashed var(--highlight);
+}
+
+.contact__social img {
+    width: 3.1rem;
+    height: 2.5rem;
+    cursor: pointer;
+    filter: var(--icon);
+}
+
+.message-box {
+    max-width: 18.7rem;
+    display: grid;
+    gap: 1em;
+    padding: 2em;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    border-radius: var(--radius);
+}
+
+.message-box__body {
+    color: var(--tag);
+    font-size: 1rem;
+}
+
+.message-box:hover {
+    cursor: pointer;
+
+}
+
+
+
+
+/*==================== FOOTER GRID========================================================================================================*/
+.footer {
+    display: grid;
+    grid-area: footer;
+    grid-template-areas:
+        "footer__copyright  footer__credit";
+    padding: 2rem;
+
+    justify-content: center;
+    column-gap: 40rem;
+    align-items: center;
+    color: #8c8fa3;
+}
+
+.footer__copyright{
+    display: grid;
+    grid-area: footer__copyright;
+    grid-auto-flow: column;
+    column-gap: 1rem;
+}
+
+.footer__copyright a:hover{
+    color: var(--highlight);
+}
+
+.footer img {
+    width: 1.25rem;
+    height: 1.25rem;
+    filter: var(--icon);
+}
+
+
+.footer__credit img:hover {
+    filter: var(--hover);
+    animation: shake 2s ease 0s infinite normal forwards;
+}
+
+/*============ ARCHIVE PAGE =======================================================================================================================*/
+/*============ ARCHIVE PAGE =======================================================================================================================*/
+.archive-grid {
+    grid-area: archive-grid;
+    display: grid;
+    row-gap: 1rem;
+    grid-template-areas:
+        "navbar"
+        "archive"
+        "footer";
+}
+
+.archive{
+    display: grid;
+    grid-area: archive;
+    grid-template-areas: 
+    "archive__title"
+    "archive__content";
+    row-gap: 3rem;
+
+    
+    padding-top: 10rem;
+    padding-bottom: 10rem;
+    padding-left: 18rem;
+    padding-right: 18rem;
+}
+
+
+.archive__title{
+    display: grid;
+    grid-area: archive__title;
+}
+
+.archive__content{
+    display: grid;
+    grid-area: archive__content;
+}
+
+
+.repo-icon {
+    cursor: pointer;
+    width: 1.5rem;
+    height: 1.5rem;
+    filter: var(--icon);
+}
+
+.archive__title h1{
+    transform: translateX(2rem);
+}
+.archive-img{
+    width: 25rem;
+    height: 15rem;
+    cursor: pointer;
+}
+
+.archive__table{
+	display: table;
+	width: 100%;
+}
+
+.TableRow {
+	display: table-row;
+}
+
+.TableCell{
+   /* border: 0.1px solid #00B388; */
+	display: table-cell;
+	padding: 1rem 2rem;
+    text-align: left;
+}
+
+
+
+/*============ PRIVACY PAGE =======================================================================================================================*/
+/*============ PRIVACY PAGE =======================================================================================================================*/
+.privacy-grid {
+    grid-area: privacy-grid;
+    display: grid;
+    row-gap: 1rem;
+    grid-template-areas:
+        "navbar"
+        "privacy"
+        "footer";
+}
+
+.privacy{
+    display: grid;
+    grid-area: privacy;
+    grid-template-areas: 
+    "privacy__title"
+    "privacy__content";
+    row-gap: 3rem;
+
+    
+    padding-top: 10rem;
+    padding-bottom: 10rem;
+    padding-left: 18rem;
+    padding-right: 18rem;
+}
+
+
+.privacy__title{
+    display: grid;
+    grid-area: privacy__title;
+}
+
+.privacy__content{
+    display: grid;
+    grid-area: privacy__content;
+}
+
+
+
+/*============ TERMS PAGE =======================================================================================================================*/
+/*============ TERMS PAGE =======================================================================================================================*/
+.terms-grid {
+    grid-area: terms-grid;
+    display: grid;
+    row-gap: 1rem;
+    grid-template-areas:
+        "navbar"
+        "terms"
+        "footer";
+}
+
+.terms{
+    display: grid;
+    grid-area: terms;
+    grid-template-areas: 
+    "terms__title"
+    "terms__content";
+    row-gap: 3rem;
+
+    
+    padding-top: 10rem;
+    padding-bottom: 10rem;
+    padding-left: 18rem;
+    padding-right: 18rem;
+}
+
+
+.terms__title{
+    display: grid;
+    grid-area: terms__title;
+}
+
+.terms__content{
+    display: grid;
+    grid-area: terms__content;
+}
+
+
+
+
+/*============ ANIMATIONS & EFFECTS =======================================================================================================================*/
+/*============ ANIMATIONS & EFFECTS =======================================================================================================================*/
+
+
+/* FLOAT ANIMATION - Keyword = float ===========================================================================*/
+.float{
+    animation: float 4s ease-in-out infinite;
+}
+    @keyframes float {
+    0% {  transform: translateY(0.5rem);}
+    50% { transform: translateY(2rem);}
+    100% { transform: translateY(0.5rem);}
+}
+
+@keyframes shake {
+    0%,
+    100% {transform: rotate(0deg); transform-origin: 50% 100%; }
+    10% {transform: rotate(2deg); }
+    20%, 40%, 60% { transform: rotate(-4deg); }
+    30%, 50%, 70% { transform: rotate(4deg); }
+    80% { transform: rotate(-2deg); }
+    90% { transform: rotate(2deg); }
+}
+
+
+/* Glassmorphism & Shadow Effect (Wildcard = glass) ====================================================================================================================================*/
+.glass {
+    border-radius: 0.75rem;
+    background-color: var(--theme);
+    backdrop-filter: blur(1rem) saturate(180%);
+    -webkit-backdrop-filter: blur(1rem) saturate(180%);
+    box-shadow: var(--boxshadow);
+}
+
+.glass-inverted{
+    border-radius: 0.75rem;
+    background-color: var(--theme);
+    backdrop-filter: blur(1rem) saturate(180%);
+    -webkit-backdrop-filter: blur(1rem) saturate(180%);
+    box-shadow: rgba(0, 0, 0, 0.3) 0rem -1.18rem 2.37rem, rgba(0, 0, 0, 0.22) 0rem -0.93rem 0.75rem;
+}
+
+
+/* Button Effect (Wildcard = btn)*/
+.btn {
+    width: fit-content;
+    border-radius: 0.31rem;
+    padding: 0.31rem 0.62rem 0.31rem 0.62rem;
+
+    color: var(--theme);
+    font-size: var(--font-size-h3);
+    font-weight: 31.25rem;
+    background-color: var(--highlight);
+    box-shadow: var(--boxshadow);
+}
+
+.btn:hover {
+    cursor: pointer;
+    background: #00B388;
+    color: #ffff;
+}

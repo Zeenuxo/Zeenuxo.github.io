@@ -1,0 +1,83 @@
+/*==================== GOOGLE FONT ===================================================================================*/
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap');
+
+
+/*==================== ROOT (CONFIGURABLE) ===========================================================================*/
+:root {
+    --font: 'Poppins', sans-serif;
+    font-size: 16px;
+
+    /* FONT-SIZE CLAMP */
+    --font-size-h4: clamp(0.63rem, 0.13vw + 0.6rem, 0.75rem);
+    --font-size-h3: clamp(0.78rem, 0.22vw + 0.74rem, 1rem);
+    --font-size-h2: clamp(0.98rem, 0.36vw + 0.91rem, 1.33rem);
+    --font-size-h1: clamp(4.22rem, 0.56vw + 1.11rem, 1.78rem);
+
+
+    /* SHAPE (Cards) RADIUS */
+    --radius: 0.50rem;
+
+    /* TYPOGRAPHY */
+    --theme: #10192b;
+    --highlight: #00f2b8;
+    --text: #b5bbd9;
+    --tag: #00f2b8;
+
+    --icon: invert(75%) sepia(83%) saturate(2267%) hue-rotate(111deg) brightness(99%) contrast(102%);
+    --hover: invert(0.5) sepia(1) hue-rotate(500deg) brightness(2);
+    --boxshadow: rgba(0, 0, 0, 0.3) 0rem 1.18rem 2.37rem, rgba(0, 0, 0, 0.22) 0rem 0.93rem 0.75rem;
+}
+
+/*==================== TYPOGRAPHY ======================================================================================*/
+a {
+    color: var(--text);
+    text-decoration: none;
+}
+
+h1 {
+    color: var(--highlight);
+    font-weight: 31rem;
+    font-size: var(--font-size-h1);
+}
+
+h2 {
+    font-weight: 31rem;
+    font-size: var(--font-size-h2);
+}
+
+h3 {
+    font-weight: 25rem;
+    font-size: var(--font-size-h3);
+}
+
+h4 {
+    color: var(--tag);
+    font-weight: 25rem;
+    font-size: var(--font-size-h4);
+}
+
+p {
+    font-size: var(--font-size-h3);
+}
+
+
+/*==================== BODY =================================================================================================*/
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+
+html {
+    scroll-behavior: smooth;   
+}
+
+
+body {
+    color: var(--text);
+    font-family: var(--font);
+    background-color: var(--theme);
+}
+
+
