@@ -116,11 +116,7 @@
         text-align: center;
 }
 
-.blog-1,
-.blog-2,
-.blog-3{
-width: 30rem;
-}
+
 
 /*CONTACT======================================*/
 .contact {
@@ -272,12 +268,8 @@ border-collapse: separate;
             text-align: center;
     }
     
-    .blog-1,
-    .blog-2,
-    .blog-3{
-    width: 30rem;
-    }
-    
+
+
     /*CONTACT======================================*/
     .contact {
         grid-area: contact;
