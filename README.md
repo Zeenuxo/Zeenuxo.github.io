@@ -2,7 +2,6 @@
 
 Responsive portfolio website built from scratch using Grid & Nested Grid layout.
 
-Hello Test
 
 <br>
 Built with Passion, Love and HTML, CSS, JS.
