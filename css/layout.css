@@ -499,7 +499,7 @@ cursor: pointer;
 .box__title {
     grid-area: box__title;
     display: grid;
- }
+}
 
 .box__content {
     grid-area: box__content;
