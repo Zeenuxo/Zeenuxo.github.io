@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "My 1st Responsive Portfolio Website.",
   "scripts": {
-    "lite": "lite-server --port 5501",
+    "lite": "lite-server --port 0000",
     "start": "npm run lite"
   },
   "author": "Abhisekh Virli",
