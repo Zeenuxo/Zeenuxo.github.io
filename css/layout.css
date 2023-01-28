@@ -345,6 +345,8 @@
 
 .portfolio__content {
     grid-area: portfolio__content;
+    display: grid;
+    justify-content: center;
 }
 
 .portfolio__carousel {
