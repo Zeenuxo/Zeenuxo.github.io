@@ -559,7 +559,6 @@ cursor: pointer;
 .blog__content {
     grid-area: blog__content;
     display: grid;
-    justify-items: center;
 }
 
 .blog-1,
@@ -673,7 +672,6 @@ cursor: pointer;
 .contact__content {
     grid-area: contact__content;
     display: grid;
-    justify-items: center;
 }
 
 .contact__social {
