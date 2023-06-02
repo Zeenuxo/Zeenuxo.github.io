@@ -1,9 +1,120 @@
 /*===========================================================================================*/
 /*================== DEVICE BREAKPOINTS FOR MEDIA QUERY =====================================*/
 /*===========================================================================================*/
+/*================== BIG DESKTOPS ==========================================================*/
+@media only screen and (min-width: 1600px) {
+  /* Adjust padding and margin for sections */
+  .home,
+  .about,
+  .portfolio,
+  .gallery,
+  .blog,
+  .contact {
+    padding-top: 6rem;
+    padding-bottom: 7rem;
+    padding-left: 4rem;
+    padding-right: 4rem;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 1400px;
+  }
+
+  /* Navbar */
+  .navbar {
+    padding: 2rem;
+  }
+
+  /* Hamburger menu */
+  .hamburger {
+    display: none;
+  }
+
+  /* Home section */
+  .home {
+    grid-template-areas:
+      "home__img home__img home__img"
+      "home__hero home__hero home__hero"
+      "home__social home__social home__social";
+  }
+
+  /* About section */
+  .about {
+    grid-template-areas:
+      "about__title about__title about__title"
+      "about__img about__content about__content"
+      "about__skills about__content about__content";
+  }
+
+  /* Portfolio section */
+  .portfolio {
+    grid-template-areas:
+      "portfolio__title portfolio__title portfolio__title"
+      "portfolio__content portfolio__content portfolio__content"
+      "portfolio__carousel portfolio__carousel portfolio__carousel"
+      "portfolio__more portfolio__more portfolio__more";
+  }
+
+  /* Gallery section */
+  .gallery {
+    grid-template-areas:
+      "gallery__title gallery__title gallery__title"
+      "box-1 box-2 box-3"
+      "box-4 box-5 box-6";
+    justify-content: space-between;
+  }
+
+  /* Blog section */
+  .blog {
+    grid-template-areas:
+      "blog__title blog__title blog__title"
+      "blog__content blog__content blog__content"
+      "blog-1 blog-2 blog-3";
+    justify-items: center;
+    text-align: center;
+  }
+
+  /* Contact section */
+  .contact {
+    grid-template-areas:
+      "contact__title contact__title contact__title"
+      "contact__content contact__content contact__content"
+      "contact__social contact__social contact__social";
+  }
+
+  /* Footer */
+  .footer {
+    grid-template-areas:
+      "footer__copyright footer__credit";
+    padding: 2rem;
+    justify-items: center;
+    column-gap: 20rem;
+  }
+
+  /* Archive */
+  .archive {
+    padding-top: 6rem;
+    padding-bottom: 6rem;
+    padding-left: 5rem;
+    padding-right: 5rem;
+    row-gap: 2rem;
+  }
+
+  .a-demo h2 {
+    display: none;
+  }
+
+  .archive-img {
+    display: none;
+  }
+
+  .archive__table {
+    border-collapse: separate;
+  }
+}
+
 
 /*================== LAPTOP/ SMALL DESKTOP ===================================================*/
-@media only screen and (max-width: 1024px) {
+@media only screen and (max-width: 1599px) and (min-width: 1025px) {
   .home,
   .about,
   .portfolio,
@@ -147,7 +258,7 @@
 }
 
 /*================== TABLET ===============================================================*/
-@media only screen and (min-width: 768px) and (max-width: 1023px) {
+@media only screen and (max-width: 1024px) and (min-width: 768px) {
   .home,
   .about,
   .portfolio,
