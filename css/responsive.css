@@ -1,145 +1,496 @@
-/* Common Styles */
-.home,
-.about,
-.portfolio,
-.gallery,
-.blog,
-.contact {
-  padding-top: 5rem;
-  padding-bottom: 6rem;
-  padding-left: 3rem;
-  padding-right: 3rem;
-  margin-left: 1rem;
-  margin-right: 1rem;
+/*===========================================================================================*/
+/*================== DEVICE BREAKPOINTS FOR MEDIA QUERY =====================================*/
+/*===========================================================================================*/
+
+/*================== BIG DESKTOPS ==========================================================*/
+@media only screen and (min-width: 1600px) {
+  /* Adjust padding and margin for sections */
+  .home,
+  .about,
+  .portfolio,
+  .gallery,
+  .blog,
+  .contact {
+    padding-top: 6rem;
+    padding-bottom: 7rem;
+    padding-left: 4rem;
+    padding-right: 4rem;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 1400px;
+  }
+
+  /* Navbar */
+  .navbar {
+    padding: 2rem;
+  }
+
+  /* Hamburger menu */
+  .hamburger {
+    display: none;
+  }
+
+  /* Home section */
+  .home {
+    grid-template-areas:
+      "home__img home__img home__img"
+      "home__hero home__hero home__hero"
+      "home__social home__social home__social";
+  }
+
+  /* About section */
+  .about {
+    grid-template-areas:
+      "about__title about__title about__title"
+      "about__img about__content about__content"
+      "about__skills about__content about__content";
+  }
+
+  /* Portfolio section */
+  .portfolio {
+    grid-template-areas:
+      "portfolio__title portfolio__title portfolio__title"
+      "portfolio__content portfolio__content portfolio__content"
+      "portfolio__carousel portfolio__carousel portfolio__carousel"
+      "portfolio__more portfolio__more portfolio__more";
+  }
+
+  /* Gallery section */
+  .gallery {
+    grid-template-areas:
+      "gallery__title gallery__title gallery__title"
+      "box-1 box-2 box-3"
+      "box-4 box-5 box-6";
+    justify-content: space-between;
+  }
+
+  /* Blog section */
+  .blog {
+    grid-template-areas:
+      "blog__title blog__title blog__title"
+      "blog__content blog__content blog__content"
+      "blog-1 blog-2 blog-3";
+    justify-items: center;
+    text-align: center;
+  }
+
+  /* Contact section */
+  .contact {
+    grid-template-areas:
+      "contact__title contact__title contact__title"
+      "contact__content contact__content contact__content"
+      "contact__social contact__social contact__social";
+  }
+
+  /* Footer */
+  .footer {
+    grid-template-areas:
+      "footer__copyright footer__credit";
+    padding: 2rem;
+    justify-items: center;
+    column-gap: 20rem;
+  }
+
+  /* Archive */
+  .archive {
+    padding-top: 6rem;
+    padding-bottom: 6rem;
+    padding-left: 5rem;
+    padding-right: 5rem;
+    row-gap: 2rem;
+  }
+
+  .a-demo h2 {
+    display: none;
+  }
+
+  .archive-img {
+    display: none;
+  }
+
+  .archive__table {
+    border-collapse: separate;
+  }
 }
 
-.navbar {
-  grid-area: navbar;
-  padding: 2rem;
+/*================== LAPTOP/SMALL DESKTOP ===================================================*/
+@media only screen and (max-width: 1599px) and (min-width: 1025px) {
+  /* Similar adjustments as big desktops, but with slightly smaller values */
+  .home,
+  .about,
+  .portfolio,
+  .gallery,
+  .blog,
+  .contact {
+    padding-top: 5rem;
+    padding-bottom: 6rem;
+    padding-left: 3rem;
+    padding-right: 3rem;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 1200px;
+  }
+
+  /* Navbar */
+  .navbar {
+    padding: 2rem;
+  }
+
+  /* Hamburger menu */
+  .hamburger {
+    display: none;
+  }
+
+  /* Home section */
+  .home {
+    grid-template-areas:
+      "home__img home__img"
+      "home__hero home__hero"
+      "home__social home__social";
+  }
+
+  /* About section */
+  .about {
+    grid-template-areas:
+      "about__title about__title"
+      "about__img about__content"
+      "about__skills about__content";
+  }
+
+  /* Portfolio section */
+  .portfolio {
+    grid-template-areas:
+      "portfolio__title portfolio__title"
+      "portfolio__content portfolio__content"
+      "portfolio__carousel portfolio__carousel"
+      "portfolio__more portfolio__more";
+  }
+
+  /* Gallery section */
+  .gallery {
+    grid-template-areas:
+      "gallery__title gallery__title"
+      "box-1 box-2"
+      "box-3 box-4"
+      "box-5 box-6";
+    justify-content: center;
+  }
+
+  .box-1,
+  .box-2,
+  .box-3,
+  .box-4,
+  .box-5,
+  .box-6 {
+    width: 20rem;
+  }
+
+  /* Blog section */
+  .blog {
+    grid-template-areas:
+      "blog__title blog__title"
+      "blog__content blog__content"
+      "blog-1 blog-2"
+      "blog-3 blog-3";
+    justify-items: center;
+    text-align: center;
+  }
+
+  /* Contact section */
+  .contact {
+    grid-template-areas:
+      "contact__title contact__title"
+      "contact__content contact__content"
+      "contact__social contact__social";
+  }
+
+  /* Footer */
+  .footer {
+    grid-template-areas:
+      "footer__copyright"
+      "footer__credit";
+    row-gap: 1rem;
+    padding: 2rem;
+    justify-items: center;
+    padding: 1rem;
+  }
+
+  /* Archive */
+  .archive {
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+    padding-left: 5rem;
+    padding-right: 5rem;
+    row-gap: 2rem;
+  }
+
+  .a-demo h2 {
+    display: none;
+  }
+
+  .archive-img {
+    display: none;
+  }
+
+  .archive__table {
+    border-collapse: separate;
+  }
 }
 
-.hamburger {
-  display: grid;
-  justify-content: right;
-  align-items: center;
+/*================== TABLET ===============================================================*/
+@media only screen and (max-width: 1024px) and (min-width: 768px) {
+  /* Similar adjustments as laptop/small desktop, but with smaller values */
+  .home,
+  .about,
+  .portfolio,
+  .gallery,
+  .blog,
+  .contact {
+    padding-top: 5rem;
+    padding-bottom: 6rem;
+    padding-left: 3rem;
+    padding-right: 3rem;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 800px;
+  }
+
+  /* Navbar */
+  .navbar {
+    padding: 2rem;
+  }
+
+  /* Hamburger menu */
+  .hamburger {
+    display: none;
+  }
+
+  /* Home section */
+  .home {
+    grid-template-areas:
+      "home__img"
+      "home__hero"
+      "home__social";
+  }
+
+  /* About section */
+  .about {
+    grid-template-areas:
+      "about__title"
+      "about__img"
+      "about__content"
+      "about__skills";
+  }
+
+  /* Portfolio section */
+  .portfolio {
+    grid-template-areas:
+      "portfolio__title"
+      "portfolio__content"
+      "portfolio__carousel"
+      "portfolio__more";
+  }
+
+  /* Gallery section */
+  .gallery {
+    grid-template-areas:
+      "gallery__title"
+      "box-1"
+      "box-2"
+      "box-3"
+      "box-4"
+      "box-5"
+      "box-6";
+    justify-content: center;
+  }
+
+  .box-1,
+  .box-2,
+  .box-3,
+  .box-4,
+  .box-5,
+  .box-6 {
+    width: 16rem;
+  }
+
+  /* Blog section */
+  .blog {
+    grid-template-areas:
+      "blog__title"
+      "blog__content"
+      "blog-1"
+      "blog-2"
+      "blog-3";
+    justify-items: center;
+    text-align: center;
+  }
+
+  /* Contact section */
+  .contact {
+    grid-template-areas:
+      "contact__title"
+      "contact__content"
+      "contact__social";
+  }
+
+  /* Footer */
+  .footer {
+    grid-template-areas:
+      "footer__copyright"
+      "footer__credit";
+    row-gap: 1rem;
+    padding: 2rem;
+    justify-items: center;
+    padding: 1rem;
+  }
+
+  /* Archive */
+  .archive {
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+    padding-left: 3rem;
+    padding-right: 3rem;
+    row-gap: 2rem;
+  }
+
+  .a-demo h2 {
+    display: none;
+  }
+
+  .archive-img {
+    display: none;
+  }
+
+  .archive__table {
+    border-collapse: separate;
+  }
 }
 
-.home {
-  grid-template-areas:
-    "home__img"
-    "home__hero"
-    "home__social";
-}
+/*================== SMARTPHONES ==========================================================*/
+@media only screen and (max-width: 767px) {
+  /* Adjustments for smartphones */
+  .home,
+  .about,
+  .portfolio,
+  .gallery,
+  .blog,
+  .contact {
+    padding-top: 4rem;
+    padding-bottom: 5rem;
+    padding-left: 2rem;
+    padding-right: 2rem;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 400px;
+  }
 
-.home__img,
-.about__img {
-  justify-self: center;
-}
+  /* Navbar */
+  .navbar {
+    padding: 1.5rem;
+  }
 
-.about__content {
-  padding-top: 2rem;
-}
+  /* Hamburger menu */
+  .hamburger {
+    display: block;
+  }
 
-.portfolio {
-  grid-area: portfolio;
-  grid-template-areas:
-    "portfolio__title"
-    "portfolio__content"
-    "portfolio__carousel"
-    "portfolio__more";
-}
+  /* Home section */
+  .home {
+    grid-template-areas:
+      "home__img"
+      "home__hero"
+      "home__social";
+  }
 
-.gallery {
-  grid-area: gallery;
-  grid-template-areas:
-    "gallery__title"
-    "box-1"
-    "box-2"
-    "box-3"
-    "box-4"
-    "box-5"
-    "box-6";
-  justify-content: center;
-}
+  /* About section */
+  .about {
+    grid-template-areas:
+      "about__title"
+      "about__img"
+      "about__content"
+      "about__skills";
+  }
 
-.box-1,
-.box-2,
-.box-3,
-.box-4,
-.box-5,
-.box-6 {
-  width: 100%;
-  max-width: 25rem;
-}
+  /* Portfolio section */
+  .portfolio {
+    grid-template-areas:
+      "portfolio__title"
+      "portfolio__content"
+      "portfolio__carousel"
+      "portfolio__more";
+  }
 
-.blog {
-  grid-area: blog;
-  grid-template-areas:
-    "blog__title"
-    "blog__content"
-    "blog-1"
-    "blog-2"
-    "blog-3";
-  justify-items: center;
-  text-align: center;
-}
+  /* Gallery section */
+  .gallery {
+    grid-template-areas:
+      "gallery__title"
+      "box-1"
+      "box-2"
+      "box-3"
+      "box-4"
+      "box-5"
+      "box-6";
+    justify-content: center;
+  }
 
-.contact {
-  grid-area: contact;
-  grid-template-areas:
-    "contact__title"
-    "contact__content"
-    "contact__social";
-}
+  .box-1,
+  .box-2,
+  .box-3,
+  .box-4,
+  .box-5,
+  .box-6 {
+    width: 100%;
+  }
 
-.footer {
-  grid-area: footer;
-  grid-template-areas:
-    "footer__copyright"
-    "footer__credit";
-  row-gap: 1rem;
-  padding: 2rem;
-  justify-items: center;
-  padding: 1rem;
-}
+  /* Blog section */
+  .blog {
+    grid-template-areas:
+      "blog__title"
+      "blog__content"
+      "blog-1"
+      "blog-2"
+      "blog-3";
+    justify-items: center;
+    text-align: center;
+  }
 
-.archive {
-  padding-top: 3rem;
-  padding-bottom: 3rem;
-  padding-left: 0rem;
-  padding-right: 0rem;
-  row-gap: 1rem;
-}
+  /* Contact section */
+  .contact {
+    grid-template-areas:
+      "contact__title"
+      "contact__content"
+      "contact__social";
+  }
 
-.a-demo h2 {
-  display: none;
-}
+  /* Footer */
+  .footer {
+    grid-template-areas:
+      "footer__copyright"
+      "footer__credit";
+    row-gap: 1rem;
+    padding: 2rem;
+    justify-items: center;
+    padding: 1rem;
+  }
 
-.archive-img {
-  display: none;
-}
+  /* Archive */
+  .archive {
+    padding-top: 4rem;
+    padding-bottom: 4rem;
+    padding-left: 2rem;
+    padding-right: 2rem;
+    row-gap: 2rem;
+  }
 
-.archive__table {
-  border-collapse: separate;
-}
+  .a-demo h2 {
+    display: none;
+  }
 
-/* Media Queries */
-@media only screen and (min-width: 1200px) {
-  /* Styles for bigger screen desktops */
-  /* Add your custom styles here */
-}
+  .archive-img {
+    display: none;
+  }
 
-@media only screen and (min-width: 1024px) and (max-width: 1199px) {
-  /* Styles for normal size desktops */
-  /* Add your custom styles here */
-}
-
-@media only screen and (min-width: 768px) and (max-width: 1023px) {
-  /* Styles for tablets */
-  /* Add your custom styles here */
-}
-
-@media only screen and (min-width: 320px) and (max-width: 767px) {
-  /* Styles for smartphones */
-  /* Add your custom styles here */
+  .archive__table {
+    border-collapse: separate;
+  }
 }
