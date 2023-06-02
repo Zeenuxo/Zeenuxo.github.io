@@ -13,7 +13,6 @@
     --font-size-h2: clamp(0.98rem, 0.36vw + 0.91rem, 1.33rem);
     --font-size-h1: clamp(4.22rem, 0.56vw + 1.11rem, 1.78rem);
 
-
     /* SHAPE (Cards) RADIUS */
     --radius: 0.50rem;
 
@@ -36,23 +35,19 @@ a {
 
 h1 {
     color: var(--highlight);
-    font-weight: 31rem;
     font-size: var(--font-size-h1);
 }
 
 h2 {
-    font-weight: 31rem;
     font-size: var(--font-size-h2);
 }
 
 h3 {
-    font-weight: 25rem;
     font-size: var(--font-size-h3);
 }
 
 h4 {
     color: var(--tag);
-    font-weight: 25rem;
     font-size: var(--font-size-h4);
 }
 
@@ -60,11 +55,11 @@ p {
     font-size: var(--font-size-h3);
 }
 
-span{
+span {
     color: var(--highlight);
 }
 
-span:hover{
+span:hover {
     cursor: pointer;
     text-decoration: underline;
 }
@@ -77,15 +72,11 @@ span:hover{
     border: 0;
 }
 
-html {
-    scroll-behavior: smooth;   
-}
-
-
 body {
     color: var(--text);
     font-family: var(--font);
     background-color: var(--theme);
+    scroll-behavior: smooth;
 }
 
 
