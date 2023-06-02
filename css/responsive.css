@@ -2,120 +2,8 @@
 /*================== DEVICE BREAKPOINTS FOR MEDIA QUERY =====================================*/
 /*===========================================================================================*/
 
-/*================== BIG DESKTOPS ==========================================================*/
-@media only screen and (min-width: 1600px) {
-  /* Adjust padding and margin for sections */
-  .home,
-  .about,
-  .portfolio,
-  .gallery,
-  .blog,
-  .contact {
-    padding-top: 6rem;
-    padding-bottom: 7rem;
-    padding-left: 4rem;
-    padding-right: 4rem;
-    margin-left: auto;
-    margin-right: auto;
-    max-width: 1400px;
-  }
-
-  /* Navbar */
-  .navbar {
-    padding: 2rem;
-  }
-
-  /* Hamburger menu */
-  .hamburger {
-    display: none;
-  }
-
-  /* Home section */
-  .home {
-    grid-template-areas:
-      "home__img home__img home__img"
-      "home__hero home__hero home__hero"
-      "home__social home__social home__social";
-  }
-
-  /* About section */
-  .about {
-    grid-template-areas:
-      "about__title about__title about__title"
-      "about__img about__content about__content"
-      "about__skills about__content about__content";
-  }
-
-  /* Portfolio section */
-  .portfolio {
-    grid-template-areas:
-      "portfolio__title portfolio__title portfolio__title"
-      "portfolio__content portfolio__content portfolio__content"
-      "portfolio__carousel portfolio__carousel portfolio__carousel"
-      "portfolio__more portfolio__more portfolio__more";
-  }
-
-  /* Gallery section */
-  .gallery {
-    grid-template-areas:
-      "gallery__title gallery__title gallery__title"
-      "box-1 box-2 box-3"
-      "box-4 box-5 box-6";
-    justify-content: space-between;
-  }
-
-  /* Blog section */
-  .blog {
-    grid-template-areas:
-      "blog__title blog__title blog__title"
-      "blog__content blog__content blog__content"
-      "blog-1 blog-2 blog-3";
-    justify-items: center;
-    text-align: center;
-  }
-
-  /* Contact section */
-  .contact {
-    grid-template-areas:
-      "contact__title contact__title contact__title"
-      "contact__content contact__content contact__content"
-      "contact__social contact__social contact__social";
-  }
-
-  /* Footer */
-  .footer {
-    grid-template-areas:
-      "footer__copyright footer__credit";
-    padding: 2rem;
-    justify-items: center;
-    column-gap: 20rem;
-  }
-
-  /* Archive */
-  .archive {
-    padding-top: 6rem;
-    padding-bottom: 6rem;
-    padding-left: 5rem;
-    padding-right: 5rem;
-    row-gap: 2rem;
-  }
-
-  .a-demo h2 {
-    display: none;
-  }
-
-  .archive-img {
-    display: none;
-  }
-
-  .archive__table {
-    border-collapse: separate;
-  }
-}
-
-/*================== LAPTOP/SMALL DESKTOP ===================================================*/
-@media only screen and (max-width: 1599px) and (min-width: 1025px) {
-  /* Similar adjustments as big desktops, but with slightly smaller values */
+/*================== LAPTOP/ SMALL DESKTOP ===================================================*/
+@media only screen and (max-width: 1024px) {
   .home,
   .about,
   .portfolio,
@@ -126,53 +14,73 @@
     padding-bottom: 6rem;
     padding-left: 3rem;
     padding-right: 3rem;
-    margin-left: auto;
-    margin-right: auto;
-    max-width: 1200px;
+    margin-left: 1rem;
+    margin-right: 1rem;
   }
 
-  /* Navbar */
+  /*NAVBAR======================================*/
   .navbar {
+    grid-area: navbar;
     padding: 2rem;
   }
 
-  /* Hamburger menu */
-  .hamburger {
+  .navmenu {
     display: none;
   }
 
-  /* Home section */
+  .hamburger {
+    display: grid;
+    justify-content: right;
+    align-items: center;
+  }
+
+  /*HOME======================================*/
   .home {
     grid-template-areas:
-      "home__img home__img"
-      "home__hero home__hero"
-      "home__social home__social";
+      "home__img"
+      "home__hero"
+      "home__social";
   }
 
-  /* About section */
+  .home__img {
+    justify-self: center;
+  }
+
+  /*ABOUT======================================*/
   .about {
     grid-template-areas:
-      "about__title about__title"
-      "about__img about__content"
-      "about__skills about__content";
+      "about__title"
+      "about__img"
+      "about__content"
+      "about__skills";
   }
 
-  /* Portfolio section */
+  .about__img {
+    justify-self: center;
+  }
+
+  .about__content {
+    padding-top: 2rem;
+  }
+
+  /*PORTFOLIO======================================*/
   .portfolio {
+    grid-area: portfolio;
     grid-template-areas:
-      "portfolio__title portfolio__title"
-      "portfolio__content portfolio__content"
-      "portfolio__carousel portfolio__carousel"
-      "portfolio__more portfolio__more";
+      "portfolio__title"
+      "portfolio__content"
+      "portfolio__carousel"
+      "portfolio__more";
   }
 
-  /* Gallery section */
+  /*Gallery======================================*/
   .gallery {
+    grid-area: gallery;
     grid-template-areas:
       "gallery__title gallery__title"
-      "box-1 box-2"
-      "box-3 box-4"
-      "box-5 box-6";
+      "box-1  box-2"
+      "box-3  box-4"
+      "box-5  box-6";
     justify-content: center;
   }
 
@@ -185,37 +93,38 @@
     width: 20rem;
   }
 
-  /* Blog section */
+  /*BLOG======================================*/
   .blog {
+    grid-area: blog;
     grid-template-areas:
-      "blog__title blog__title"
-      "blog__content blog__content"
-      "blog-1 blog-2"
-      "blog-3 blog-3";
+      "blog__title"
+      "blog__content"
+      "blog-1"
+      "blog-2"
+      "blog-3";
     justify-items: center;
     text-align: center;
   }
 
-  /* Contact section */
+  /*CONTACT======================================*/
   .contact {
+    grid-area: contact;
     grid-template-areas:
-      "contact__title contact__title"
-      "contact__content contact__content"
-      "contact__social contact__social";
+      "contact__title"
+      "contact__content"
+      "contact__social";
   }
 
-  /* Footer */
+  /*FOOTER======================================*/
   .footer {
+    grid-area: footer;
     grid-template-areas:
-      "footer__copyright"
-      "footer__credit";
-    row-gap: 1rem;
+      "footer__copyright footer__credit";
     padding: 2rem;
     justify-items: center;
-    padding: 1rem;
+    column-gap: 20rem;
   }
 
-  /* Archive */
   .archive {
     padding-top: 5rem;
     padding-bottom: 5rem;
@@ -238,8 +147,7 @@
 }
 
 /*================== TABLET ===============================================================*/
-@media only screen and (max-width: 1024px) and (min-width: 768px) {
-  /* Similar adjustments as laptop/small desktop, but with smaller values */
+@media only screen and (min-width: 768px) and (max-width: 1023px) {
   .home,
   .about,
   .portfolio,
@@ -250,22 +158,27 @@
     padding-bottom: 6rem;
     padding-left: 3rem;
     padding-right: 3rem;
-    margin-left: auto;
-    margin-right: auto;
-    max-width: 800px;
+    margin-left: 1rem;
+    margin-right: 1rem;
   }
 
-  /* Navbar */
+  /*NAVBAR======================================*/
   .navbar {
+    grid-area: navbar;
     padding: 2rem;
   }
 
-  /* Hamburger menu */
-  .hamburger {
+  .navmenu {
     display: none;
   }
 
-  /* Home section */
+  .hamburger {
+    display: grid;
+    justify-content: right;
+    align-items: center;
+  }
+
+  /*HOME======================================*/
   .home {
     grid-template-areas:
       "home__img"
@@ -273,7 +186,11 @@
       "home__social";
   }
 
-  /* About section */
+  .home__img {
+    justify-self: center;
+  }
+
+  /*ABOUT======================================*/
   .about {
     grid-template-areas:
       "about__title"
@@ -282,8 +199,16 @@
       "about__skills";
   }
 
-  /* Portfolio section */
+  .about__img {
+    justify-self: center;
+  }
+  .about__content {
+    padding-top: 2rem;
+  }
+
+  /*PORTFOLIO======================================*/
   .portfolio {
+    grid-area: portfolio;
     grid-template-areas:
       "portfolio__title"
       "portfolio__content"
@@ -291,8 +216,9 @@
       "portfolio__more";
   }
 
-  /* Gallery section */
+  /*Gallery======================================*/
   .gallery {
+    grid-area: gallery;
     grid-template-areas:
       "gallery__title"
       "box-1"
@@ -310,11 +236,12 @@
   .box-4,
   .box-5,
   .box-6 {
-    width: 16rem;
+    width: 25rem;
   }
 
-  /* Blog section */
+  /*BLOG======================================*/
   .blog {
+    grid-area: blog;
     grid-template-areas:
       "blog__title"
       "blog__content"
@@ -325,16 +252,18 @@
     text-align: center;
   }
 
-  /* Contact section */
+  /*CONTACT======================================*/
   .contact {
+    grid-area: contact;
     grid-template-areas:
       "contact__title"
       "contact__content"
       "contact__social";
   }
 
-  /* Footer */
+  /*FOOTER======================================*/
   .footer {
+    grid-area: footer;
     grid-template-areas:
       "footer__copyright"
       "footer__credit";
@@ -344,13 +273,12 @@
     padding: 1rem;
   }
 
-  /* Archive */
   .archive {
-    padding-top: 5rem;
-    padding-bottom: 5rem;
-    padding-left: 3rem;
-    padding-right: 3rem;
-    row-gap: 2rem;
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+    padding-left: 0rem;
+    padding-right: 0rem;
+    row-gap: 1rem;
   }
 
   .a-demo h2 {
@@ -366,35 +294,39 @@
   }
 }
 
-/*================== SMARTPHONES ==========================================================*/
-@media only screen and (max-width: 767px) {
-  /* Adjustments for smartphones */
+/*================== SMARTPHONE ============================================================*/
+@media only screen and (min-width: 320px) and (max-width: 767px) {
   .home,
   .about,
   .portfolio,
   .gallery,
   .blog,
   .contact {
-    padding-top: 4rem;
-    padding-bottom: 5rem;
-    padding-left: 2rem;
-    padding-right: 2rem;
-    margin-left: auto;
-    margin-right: auto;
-    max-width: 400px;
+    padding-top: 5rem;
+    padding-bottom: 6rem;
+    padding-left: 3rem;
+    padding-right: 3rem;
+    margin-left: 1rem;
+    margin-right: 1rem;
   }
 
-  /* Navbar */
+  /*NAVBAR======================================*/
   .navbar {
-    padding: 1.5rem;
+    grid-area: navbar;
+    padding: 1rem;
   }
 
-  /* Hamburger menu */
+  .navmenu {
+    display: none;
+  }
+
   .hamburger {
-    display: block;
+    display: grid;
+    justify-content: right;
+    align-items: center;
   }
 
-  /* Home section */
+  /*HOME======================================*/
   .home {
     grid-template-areas:
       "home__img"
@@ -402,7 +334,11 @@
       "home__social";
   }
 
-  /* About section */
+  .home__img {
+    justify-self: center;
+  }
+
+  /*ABOUT======================================*/
   .about {
     grid-template-areas:
       "about__title"
@@ -411,8 +347,17 @@
       "about__skills";
   }
 
-  /* Portfolio section */
+  .about__img {
+    justify-self: center;
+  }
+
+  .about__content {
+    padding-top: 2rem;
+  }
+
+  /*PORTFOLIO======================================*/
   .portfolio {
+    grid-area: portfolio;
     grid-template-areas:
       "portfolio__title"
       "portfolio__content"
@@ -420,8 +365,9 @@
       "portfolio__more";
   }
 
-  /* Gallery section */
+  /*GALLERY ======================================*/
   .gallery {
+    grid-area: gallery;
     grid-template-areas:
       "gallery__title"
       "box-1"
@@ -439,11 +385,12 @@
   .box-4,
   .box-5,
   .box-6 {
-    width: 100%;
+    width: 25rem;
   }
 
-  /* Blog section */
+  /*BLOG======================================*/
   .blog {
+    grid-area: blog;
     grid-template-areas:
       "blog__title"
       "blog__content"
@@ -454,16 +401,18 @@
     text-align: center;
   }
 
-  /* Contact section */
+  /*CONTACT======================================*/
   .contact {
+    grid-area: contact;
     grid-template-areas:
       "contact__title"
       "contact__content"
       "contact__social";
   }
 
-  /* Footer */
+  /*FOOTER======================================*/
   .footer {
+    grid-area: footer;
     grid-template-areas:
       "footer__copyright"
       "footer__credit";
@@ -473,13 +422,12 @@
     padding: 1rem;
   }
 
-  /* Archive */
   .archive {
-    padding-top: 4rem;
-    padding-bottom: 4rem;
-    padding-left: 2rem;
-    padding-right: 2rem;
-    row-gap: 2rem;
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+    padding-left: 0rem;
+    padding-right: 0rem;
+    row-gap: 1rem;
   }
 
   .a-demo h2 {
