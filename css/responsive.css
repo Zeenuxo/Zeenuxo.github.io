@@ -4,7 +4,7 @@
 
 
 /*================== LAPTOP/ SMALL DESKTOP ===================================================*/
-@media only screen and (max-width: 1599px) and (min-width: 1025px) {
+@media only screen and (max-width: 1600px) {
   .home,
   .about,
   .portfolio,
@@ -148,7 +148,7 @@
 }
 
 /*================== TABLET ===============================================================*/
-@media only screen and (max-width: 1024px) and (min-width: 768px) {
+@media only screen and (max-width: 1024px) {
   .home,
   .about,
   .portfolio,
